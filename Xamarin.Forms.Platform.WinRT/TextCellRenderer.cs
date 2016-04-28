@@ -17,7 +17,7 @@ namespace Xamarin.Forms.Platform.WinRT
 		{
 			if (cell.RealParent is ListView)
 			{
-				if (TemplatedItemsList<ItemsView<Cell>, Cell>.GetIsGroupHeader(cell))
+				if (cell.GetIsGroupHeader<ItemsView<Cell>, Cell>())
 					return (WDataTemplate)WApplication.Current.Resources["ListViewHeaderTextCell"];
 
 				//return (WDataTemplate) WApplication.Current.Resources["ListViewTextCell"];
@@ -40,7 +40,7 @@ namespace Xamarin.Forms.Platform.WinRT
 
 		public void Execute(object parameter)
 		{
-			var entryCell = (EntryCell)parameter;
+			var entryCell = (IEntryCellController)parameter;
 			entryCell.SendCompleted();
 		}
 	}

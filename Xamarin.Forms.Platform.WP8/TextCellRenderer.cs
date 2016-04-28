@@ -10,7 +10,7 @@ namespace Xamarin.Forms.Platform.WinPhone
 		{
 			if (cell.RealParent is ListView)
 			{
-				if (TemplatedItemsList<ItemsView<Cell>, Cell>.GetIsGroupHeader(cell))
+				if (cell.GetIsGroupHeader<ItemsView<Cell>, Cell>())
 					return (System.Windows.DataTemplate)System.Windows.Application.Current.Resources["ListViewHeaderTextCell"];
 
 				return (System.Windows.DataTemplate)System.Windows.Application.Current.Resources["ListViewTextCell"];
@@ -31,7 +31,7 @@ namespace Xamarin.Forms.Platform.WinPhone
 
 		public void Execute(object parameter)
 		{
-			var entryCell = (EntryCell)parameter;
+			var entryCell = (IEntryCellController)parameter;
 			entryCell.SendCompleted();
 		}
 

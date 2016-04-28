@@ -23,6 +23,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 using Object = Java.Lang.Object;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Platform.Android.AppCompat
 {
@@ -651,12 +652,13 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
 			foreach (ToolbarItem item in _toolbarTracker.ToolbarItems)
 			{
+				IMenuItemController controller = item;
 				item.PropertyChanged += HandleToolbarItemPropertyChanged;
 				if (item.Order == ToolbarItemOrder.Secondary)
 				{
 					IMenuItem menuItem = menu.Add(item.Text);
-					menuItem.SetEnabled(item.IsEnabled);
-					menuItem.SetOnMenuItemClickListener(new GenericMenuClickListener(item.Activate));
+					menuItem.SetEnabled(controller.IsEnabled);
+					menuItem.SetOnMenuItemClickListener(new GenericMenuClickListener(controller.Activate));
 				}
 				else
 				{
@@ -668,9 +670,9 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 						if (iconBitmap != null)
 							menuItem.SetIcon(iconBitmap);
 					}
-					menuItem.SetEnabled(item.IsEnabled);
+					menuItem.SetEnabled(controller.IsEnabled);
 					menuItem.SetShowAsAction(ShowAsAction.Always);
-					menuItem.SetOnMenuItemClickListener(new GenericMenuClickListener(item.Activate));
+					menuItem.SetOnMenuItemClickListener(new GenericMenuClickListener(controller.Activate));
 				}
 			}
 		}
