@@ -23,7 +23,6 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 using Object = Java.Lang.Object;
-using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Platform.Android.AppCompat
 {
