@@ -241,7 +241,7 @@
     <Compile Include="TelephoneKeyboard.cs" />
     <Compile Include="TemplateBinding.cs" />
     <Compile Include="TemplatedItemsList.cs" />
-    <Compile Include="Cells\CellExtensions.cs" />
+    <Compile Include="Internals\CellExtensions.cs" />
     <Compile Include="TemplatedPage.cs" />
     <Compile Include="TemplatedView.cs" />
     <Compile Include="TemplateUtilities.cs" />

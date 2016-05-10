@@ -10,7 +10,6 @@ namespace Xamarin.Forms
 		Element FooterElement { get; }
 		Element HeaderElement { get; }
 		bool RefreshAllowed { get; }
-		bool TakePerformanceHit { get; }
 
 		Cell CreateDefaultCell(object item);
 		string GetDisplayTextFromGroup(object cell);

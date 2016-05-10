@@ -12,6 +12,7 @@ using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 using SLButton = System.Windows.Controls.Button;
 using SLBinding = System.Windows.Data.Binding;
 using System.Collections;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Platform.WinPhone
 {

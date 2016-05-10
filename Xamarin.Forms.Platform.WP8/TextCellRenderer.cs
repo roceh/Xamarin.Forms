@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using Microsoft.Phone.Controls;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Platform.WinPhone
 {

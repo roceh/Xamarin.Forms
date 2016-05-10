@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Views;
 using AView = Android.Views.View;
 using AColor = Android.Graphics.Color;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Platform.Android
 {

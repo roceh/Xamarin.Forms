@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using WDataTemplate = Windows.UI.Xaml.DataTemplate;
 using WApplication = Windows.UI.Xaml.Application;
+using Xamarin.Forms.Internals;
 
 #if WINDOWS_UWP
 

@@ -1,4 +1,5 @@
 using System;
+using Xamarin.Forms.Internals;
 #if __UNIFIED__
 using Foundation;
 

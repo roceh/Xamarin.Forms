@@ -1,7 +1,6 @@
 using System;
-using Xamarin.Forms.Internals;
 
-namespace Xamarin.Forms
+namespace Xamarin.Forms.Internals
 {
 	public static class CellExtensions
 	{

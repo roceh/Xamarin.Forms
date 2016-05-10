@@ -60,8 +60,6 @@ namespace Xamarin.Forms
 
 		public ListView()
 		{
-			TakePerformanceHit = false;
-
 			VerticalOptions = HorizontalOptions = LayoutOptions.FillAndExpand;
 
 			TemplatedItems.IsGroupingEnabledProperty = IsGroupingEnabledProperty;
@@ -196,15 +194,6 @@ namespace Xamarin.Forms
 			get
 			{
 				return CachingStrategy;
-			}
-		}
-
-		internal bool TakePerformanceHit { get; set; }
-		bool IListViewController.TakePerformanceHit
-		{
-			get
-			{
-				return TakePerformanceHit;
 			}
 		}
 

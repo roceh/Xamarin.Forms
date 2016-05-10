@@ -211,11 +211,6 @@ namespace Xamarin.Forms.Platform.iOS
 
 				var controller = (IListViewController)e.NewElement;
 
-				//if the user specifies he wants to sacrifice performance we will do things like:
-				// - don't EstimateRowHeight anymore
-				if (controller.TakePerformanceHit)
-					_shouldEstimateRowHeight = false;
-
 				controller.ScrollToRequested += OnScrollToRequested;
 				var templatedItems = ((ITemplatedItemsView<Cell>)e.NewElement).TemplatedItems;
 
