@@ -1,4 +1,4 @@
-<Type Name="CellExtensions" FullName="Xamarin.Forms.CellExtensions">
+<Type Name="CellExtensions" FullName="Xamarin.Forms.Internals.CellExtensions">
   <TypeSignature Language="C#" Value="public static class CellExtensions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CellExtensions extends System.Object" />
   <AssemblyInfo>

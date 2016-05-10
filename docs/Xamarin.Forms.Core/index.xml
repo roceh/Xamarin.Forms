@@ -186,7 +186,6 @@
       <Type Name="Button+ButtonContentTypeConverter" Kind="Class" />
       <Type Name="CarouselPage" Kind="Class" />
       <Type Name="Cell" Kind="Class" />
-      <Type Name="CellExtensions" Kind="Class" />
       <Type Name="CollectionSynchronizationCallback" Kind="Delegate" />
       <Type Name="Color" Kind="Structure" />
       <Type Name="ColorTypeConverter" Kind="Class" />
@@ -249,6 +248,7 @@
       <Type Name="IApplicationController" Kind="Interface" />
       <Type Name="IAppLinkEntry" Kind="Interface" />
       <Type Name="IAppLinks" Kind="Interface" />
+      <Type Name="IButtonController" Kind="Interface" />
       <Type Name="ICellController" Kind="Interface" />
       <Type Name="IDefinition" Kind="Interface" />
       <Type Name="IEffectControlProvider" Kind="Interface" />
@@ -257,6 +257,7 @@
       <Type Name="IEntryController" Kind="Interface" />
       <Type Name="IExtendedTypeConverter" Kind="Interface" />
       <Type Name="IGestureRecognizer" Kind="Interface" />
+      <Type Name="IImageController" Kind="Interface" />
       <Type Name="IItemsView`1" DisplayName="IItemsView&lt;T&gt;" Kind="Interface" />
       <Type Name="IItemViewController" Kind="Interface" />
       <Type Name="ILayout" Kind="Interface" />
@@ -267,9 +268,11 @@
       <Type Name="ImageCell" Kind="Class" />
       <Type Name="ImageSource" Kind="Class" />
       <Type Name="ImageSourceConverter" Kind="Class" />
+      <Type Name="IMasterDetailPageController" Kind="Interface" />
       <Type Name="IMenuItemController" Kind="Interface" />
       <Type Name="INativeElementView" Kind="Interface" />
       <Type Name="INavigation" Kind="Interface" />
+      <Type Name="INavigationPageController" Kind="Interface" />
       <Type Name="InputView" Kind="Class" />
       <Type Name="IOpenGlViewController" Kind="Interface" />
       <Type Name="IOpenGLViewController" Kind="Interface" />
@@ -278,6 +281,8 @@
       <Type Name="IPlatformEngine" Kind="Interface" />
       <Type Name="IRegisterable" Kind="Interface" />
       <Type Name="IScrollViewController" Kind="Interface" />
+      <Type Name="ISearchBarController" Kind="Interface" />
+      <Type Name="IStreamImageSource" Kind="Interface" />
       <Type Name="ITableModel" Kind="Interface" />
       <Type Name="ITableViewController" Kind="Interface" />
       <Type Name="ITemplatedItemsList`1" DisplayName="ITemplatedItemsList&lt;TItem&gt;" Kind="Interface" />
@@ -422,12 +427,15 @@
       <Type Name="WebViewSourceTypeConverter" Kind="Class" />
     </Namespace>
     <Namespace Name="Xamarin.Forms.Internals">
+      <Type Name="CellExtensions" Kind="Class" />
       <Type Name="DynamicResource" Kind="Class" />
       <Type Name="EvalRequested" Kind="Class" />
       <Type Name="IDataTemplate" Kind="Interface" />
       <Type Name="IDynamicResourceHandler" Kind="Interface" />
       <Type Name="INameScope" Kind="Interface" />
+      <Type Name="InvalidationTrigger" Kind="Enumeration" />
       <Type Name="NameScope" Kind="Class" />
+      <Type Name="NavigationRequestedEventArgs" Kind="Class" />
       <Type Name="NotifyCollectionChangedEventArgsEx" Kind="Class" />
       <Type Name="NotifyCollectionChangedEventArgsExtensions" Kind="Class" />
       <Type Name="PreserveAttribute" Kind="Class" />
@@ -774,7 +782,7 @@
           <param name="cell">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.GetGroup``2(``1)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.GetGroup``2(``1)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
@@ -810,7 +818,7 @@
           <param name="cell">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.GetGroupHeaderContent``2(``1)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.GetGroupHeaderContent``2(``1)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
@@ -846,7 +854,7 @@
           <param name="cell">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.GetIndex``2(``1)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.GetIndex``2(``1)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
@@ -882,7 +890,7 @@
           <param name="cell">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.GetIsGroupHeader``2(``1)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.GetIsGroupHeader``2(``1)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
@@ -903,7 +911,7 @@
           <param name="cell">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.GetPath(Xamarin.Forms.Cell)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.GetPath(Xamarin.Forms.Cell)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
@@ -941,7 +949,7 @@
           <param name="value">To be added.</param>
           <summary>To be added.</summary>
         </Docs>
-        <Link Type="Xamarin.Forms.CellExtensions" Member="M:Xamarin.Forms.CellExtensions.SetIsGroupHeader``2(``1,System.Boolean)" />
+        <Link Type="Xamarin.Forms.Internals.CellExtensions" Member="M:Xamarin.Forms.Internals.CellExtensions.SetIsGroupHeader``2(``1,System.Boolean)" />
       </Member>
     </ExtensionMethod>
     <ExtensionMethod>
