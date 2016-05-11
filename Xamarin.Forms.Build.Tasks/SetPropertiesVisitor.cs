@@ -311,7 +311,7 @@ namespace Xamarin.Forms.Build.Tasks
 			var handled = false;
 
 			//If it's an attached BP, update elementType and propertyName
-			var attached = GetNameAndTypeRef(ref elementType, propertyName.NamespaceURI, ref localName, context, iXmlLineInfo);
+			GetNameAndTypeRef(ref elementType, propertyName.NamespaceURI, ref localName, context, iXmlLineInfo);
 
 			//If the target is an event, connect
 			//			IL_0007:  ldloc.0 
