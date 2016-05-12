@@ -30,9 +30,9 @@ namespace Xamarin.Forms.Build.Tasks
 			ModuleDefinition module)
 		{
 			if (self == null)
-				throw new ArgumentNullException("self");
+				throw new ArgumentNullException(nameof(self));
 			if (declaringTypeRef == null)
-				throw new ArgumentNullException("declaringTypeRef");
+				throw new ArgumentNullException(nameof(declaringTypeRef));
 
 			var reference = new MethodReference(self.Name, self.ReturnType)
 			{
@@ -42,8 +42,10 @@ namespace Xamarin.Forms.Build.Tasks
 				CallingConvention = self.CallingConvention
 			};
 
-			foreach (var parameter in self.Parameters)
-				reference.Parameters.Add(new ParameterDefinition(module.Import(parameter.ParameterType)));
+			foreach (var parameter in self.Parameters) {
+				var p = parameter.ParameterType.IsGenericParameter ? parameter.ParameterType : module.Import(parameter.ParameterType);
+				reference.Parameters.Add(new ParameterDefinition(p));
+			}
 
 			foreach (var generic_parameter in self.GenericParameters)
 				reference.GenericParameters.Add(new GenericParameter(generic_parameter.Name, reference));
