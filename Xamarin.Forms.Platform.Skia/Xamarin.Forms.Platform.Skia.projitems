@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>0ce04412-28b3-4136-8863-3a39954540bd</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.Platform.Skia</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EffectUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ElementChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExportCellAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExportImageSourceHandlerAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExportRendererAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISKiaRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IVisualElementRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RendererPool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderers\LabelRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResourcesProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SkiaExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewInitializedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VisualElementPackager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VisualElementRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VisualElementTracker.cs" />
+  </ItemGroup>
+</Project>

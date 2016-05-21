@@ -1,0 +1,208 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+
+namespace Xamarin.Forms.Platform.Skia
+{
+    [Flags]
+    public enum VisualElementRendererFlags
+    {
+        Disposed = 1 << 0,
+        AutoTrack = 1 << 1,
+        AutoPackage = 1 << 2
+    }
+
+    public class VisualElementRenderer<TElement> : SkiaView, IDisposable, IVisualElementRenderer, IEffectControlProvider where TElement : VisualElement
+    {
+        readonly Color _defaultColor = Color.Transparent;
+
+        readonly List<EventHandler<VisualElementChangedEventArgs>> _elementChangedHandlers = new List<EventHandler<VisualElementChangedEventArgs>>();
+
+        readonly PropertyChangedEventHandler _propertyChangedHandler;
+
+        VisualElementRendererFlags _flags = VisualElementRendererFlags.AutoPackage | VisualElementRendererFlags.AutoTrack;
+
+        VisualElementPackager _packager;
+        VisualElementTracker _tracker;
+
+        protected VisualElementRenderer()
+        {
+            _propertyChangedHandler = OnElementPropertyChanged;
+        }
+
+        public event EventHandler<ElementChangedEventArgs<TElement>> ElementChanged;
+
+        public TElement Element { get; private set; }
+
+        VisualElement IVisualElementRenderer.Element
+        {
+            get { return Element; }
+        }
+
+        public SkiaView NativeView
+        {
+            get { return this; }
+        }
+
+        protected bool AutoPackage
+        {
+            get { return (_flags & VisualElementRendererFlags.AutoPackage) != 0; }
+            set
+            {
+                if (value)
+                    _flags |= VisualElementRendererFlags.AutoPackage;
+                else
+                    _flags &= ~VisualElementRendererFlags.AutoPackage;
+            }
+        }
+
+        protected bool AutoTrack
+        {
+            get { return (_flags & VisualElementRendererFlags.AutoTrack) != 0; }
+            set
+            {
+                if (value)
+                    _flags |= VisualElementRendererFlags.AutoTrack;
+                else
+                    _flags &= ~VisualElementRendererFlags.AutoTrack;
+            }
+        }
+
+        event EventHandler<VisualElementChangedEventArgs> IVisualElementRenderer.ElementChanged
+        {
+            add { _elementChangedHandlers.Add(value); }
+            remove { _elementChangedHandlers.Remove(value); }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        public void Dispose(bool disposing)
+        {
+            if ((_flags & VisualElementRendererFlags.Disposed) != 0)
+                return;
+            _flags |= VisualElementRendererFlags.Disposed;
+
+            if (disposing)
+            {
+                if (_tracker != null)
+                {
+                    _tracker.Dispose();
+                    _tracker = null;
+                }
+                if (_packager != null)
+                {
+                    _packager.Dispose();
+                    _packager = null;
+                }
+
+                Platform.SetRenderer(Element, null);
+                SetElement(null);
+                Element = null;
+            }
+        }
+
+        public virtual SizeRequest GetDesiredSize(double widthConstraint, double heightConstraint)
+        {
+            return NativeView.GetSizeRequest(widthConstraint, heightConstraint);
+        }
+
+        public void RegisterEffect(Effect effect)
+        {
+            var platformEffect = effect as PlatformEffect;
+            if (platformEffect != null)
+                OnRegisterEffect(platformEffect);
+        }
+
+        public void SetElement(TElement element)
+        {
+            var oldElement = Element;
+            Element = element;
+
+            if (oldElement != null)
+                oldElement.PropertyChanged -= _propertyChangedHandler;
+
+            if (element != null)
+            {
+                if (element.BackgroundColor != Color.Default || (oldElement != null && element.BackgroundColor != oldElement.BackgroundColor))
+                    SetBackgroundColor(element.BackgroundColor);
+
+                UpdateClipToBounds();
+
+                if (_tracker == null)
+                {
+                    _tracker = new VisualElementTracker(this);
+                    _tracker.NativeControlUpdated += (sender, e) => UpdateNativeWidget();
+                }
+
+                if (AutoPackage && _packager == null)
+                {
+                    _packager = new VisualElementPackager(this);
+                    _packager.Load();
+                }
+
+                element.PropertyChanged += _propertyChangedHandler;
+            }
+
+            OnElementChanged(new ElementChangedEventArgs<TElement>(oldElement, element));
+
+            EffectUtilities.RegisterEffectControlProvider(this, oldElement, element);
+        }
+
+        public void SetElement(VisualElement element)
+        {
+            SetElement((TElement)element);
+        }
+
+        public void SetElementSize(Size size)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected virtual void OnElementChanged(ElementChangedEventArgs<TElement> e)
+        {
+            var args = new VisualElementChangedEventArgs(e.OldElement, e.NewElement);
+            for (var i = 0; i < _elementChangedHandlers.Count; i++)
+                _elementChangedHandlers[i](this, args);
+
+            var changed = ElementChanged;
+            if (changed != null)
+                changed(this, e);
+        }
+
+        protected virtual void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == VisualElement.BackgroundColorProperty.PropertyName)
+                SetBackgroundColor(Element.BackgroundColor);
+            else if (e.PropertyName == Xamarin.Forms.Layout.IsClippedToBoundsProperty.PropertyName)
+                UpdateClipToBounds();
+        }
+
+        protected virtual void OnRegisterEffect(PlatformEffect effect)
+        {
+            effect.Container = this;
+        }
+
+        protected virtual void SetBackgroundColor(Color color)
+        {
+            if (color == Color.Default)
+                BackgroundColor = _defaultColor;
+            else
+                BackgroundColor = color;
+        }
+
+        protected virtual void UpdateNativeWidget()
+        {
+        }
+
+        void UpdateClipToBounds()
+        {
+            var clippableLayout = Element as Layout;
+            if (clippableLayout != null)
+                IsClippedToBounds = clippableLayout.IsClippedToBounds;
+        }
+    }
+}
