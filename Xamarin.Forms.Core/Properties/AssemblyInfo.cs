@@ -56,4 +56,5 @@ using Xamarin.Forms.Internals;
 [assembly: InternalsVisibleTo("Xamarin.Forms.Pages.UnitTests")]
 [assembly: InternalsVisibleTo("Xamarin.Forms.CarouselView")]
 [assembly: InternalsVisibleTo("Xamarin.Forms.Platform.Skia.Win32")]
+[assembly: InternalsVisibleTo("Xamarin.Forms.Platform.Skia.LinuxFB")]
 [assembly: Preserve]

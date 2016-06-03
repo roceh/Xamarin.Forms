@@ -120,17 +120,23 @@ namespace Xamarin.Forms.Platform.Skia
 
                     var bitmapHandle = Win32Api.CreateDIBSection(hdc, ref bitmapInfo, Win32Api.DIB_RGB_COLORS, ref bits, IntPtr.Zero, 0);
 
-                    var renderer = Platform.CreateRenderer(_app.MainPage);
-                    Platform.SetRenderer(_app.MainPage, renderer);
+                    IVisualElementRenderer renderer = Platform.GetRenderer(_app.MainPage);
 
+                    if (renderer == null)
+                    {
+                        renderer = Platform.CreateRenderer(_app.MainPage);
+                        Platform.SetRenderer(_app.MainPage, renderer);
+                    }
+                    
                     renderer.NativeView.RootRenderer = this;
 
                     _app.MainPage.Layout(new Rectangle(0, 0, _width, _height));
 
                     using (var surface = SKSurface.Create(_width, _height, SKColorType.N_32, SKAlphaType.Opaque, bits, _width * 4))
                     {
-                        surface.Canvas.Clear(Color.White.ToSKColor());
-                        renderer.NativeView.Draw(surface.Canvas);
+                        var canvas = surface.Canvas;
+                        canvas.Clear(Color.White.ToSKColor());
+                        renderer.NativeView.Draw(canvas);
                     }
 
                     Win32Api.SelectObject(memoryDC, bitmapHandle);

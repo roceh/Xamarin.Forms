@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Platform.Skia;
 
-namespace SkiaWin32Demo
+namespace Xamarin.Forms.SkiaWin32Demo
 {
     internal class Program
     {

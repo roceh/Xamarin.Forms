@@ -8,7 +8,7 @@ namespace Xamarin.Forms.Platform.Skia
 
     public abstract class ViewRenderer<TView, TNativeView> : VisualElementRenderer<TView> where TView : View where TNativeView : SkiaView
     {
-        private Color _defaultColor;
+        Color _defaultColor;
 
         public TNativeView Control { get; private set; }
 
@@ -20,14 +20,13 @@ namespace Xamarin.Forms.Platform.Skia
 
         public override void Layout()
         {
-            base.Layout();
-
             if (Control != null)
             {
                 Control.X = 0;
                 Control.Y = 0;
                 Control.Width = Element.Width;
                 Control.Height = Element.Height;
+                Control.Layout();
             }
         }
 

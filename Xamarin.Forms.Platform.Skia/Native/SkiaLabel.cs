@@ -9,28 +9,112 @@ namespace Xamarin.Forms.Platform.Skia
         FontAttributes _cachedTypeFaceFontAttributes;
         string _cachedTypeFaceFontFamily;
         FontAttributes _fontAttributes = FontAttributes.None;
-        private string _fontFamily;
-        private double _fontSize = 10;
-        private TextAlignment _horizontalTextAlignment = TextAlignment.Start;
-        private string _text = String.Empty;
-        private Color _textColor = Color.Black;
-        private TextAlignment _verticalTextAlignment = TextAlignment.Start;
+        string _fontFamily;
+        double _fontSize = 10;
+        TextAlignment _horizontalTextAlignment = TextAlignment.Start;
+        string _text = String.Empty;
+        Color _textColor = Color.Black;
+        TextAlignment _verticalTextAlignment = TextAlignment.Start;
 
-        public FontAttributes FontAttributes { get { return _fontAttributes; } set { _fontAttributes = value; Invalidate(); } }
+        public FontAttributes FontAttributes
+        {
+            get
+            {
+                return _fontAttributes;
+            }
 
-        public string FontFamily { get { return _fontFamily; } set { _fontFamily = value; Invalidate(); } }
+            set
+            {
+                _fontAttributes = value;
+                Invalidate();
+            }
+        }
 
-        public double FontSize { get { return _fontSize; } set { _fontSize = value; Invalidate(); } }
+        public string FontFamily
+        {
+            get
+            {
+                return _fontFamily;
+            }
 
-        public TextAlignment HorizontalTextAlignment { get { return _horizontalTextAlignment; } set { _horizontalTextAlignment = value; Invalidate(); } }
+            set
+            {
+                _fontFamily = value;
+                Invalidate();
+            }
+        }
 
-        public string Text { get { return _text; } set { _text = value; Invalidate(); } }
+        public double FontSize
+        {
+            get
+            {
+                return _fontSize;
+            }
 
-        public Color TextColor { get { return _textColor; } set { _textColor = value; Invalidate(); } }
+            set
+            {
+                _fontSize = value;
+                Invalidate();
+            }
+        }
 
-        public TextAlignment VerticalTextAlignment { get { return _verticalTextAlignment; } set { _verticalTextAlignment = value; Invalidate(); } }
+        public TextAlignment HorizontalTextAlignment
+        {
+            get
+            {
+                return _horizontalTextAlignment;
+            }
 
-        public override Size SizeThatFits(double widthConstraint, double heightConstaint)
+            set
+            {
+                _horizontalTextAlignment = value;
+                Invalidate();
+            }
+        }
+
+        public string Text
+        {
+            get
+            {
+                return _text;
+            }
+
+            set
+            {
+                _text = value;
+                Invalidate();
+            }
+        }
+
+        public Color TextColor
+        {
+            get
+            {
+                return _textColor;
+            }
+
+            set
+            {
+                _textColor = value;
+                Invalidate();
+            }
+        }
+
+        public TextAlignment VerticalTextAlignment
+        {
+            get
+            {
+                return _verticalTextAlignment;
+            }
+
+            set
+            {
+                _verticalTextAlignment = value;
+                Invalidate();
+            }
+        }
+
+        public override Size SizeThatFits(double widthConstraint, double heightConstraint)
         {
             if (!String.IsNullOrEmpty(Text))
             {
@@ -45,10 +129,10 @@ namespace Xamarin.Forms.Platform.Skia
                     labelHeight = Math.Abs(paint.FontMetrics.Descent) + Math.Abs(paint.FontMetrics.Ascent);
                 }
 
-                return new Size(Double.IsPositiveInfinity(widthConstraint) ? labelWidth : Math.Min(labelWidth, widthConstraint), Double.IsPositiveInfinity(heightConstaint) ? labelHeight : Math.Min(labelHeight, heightConstaint));
+                return new Size(Double.IsPositiveInfinity(widthConstraint) ? labelWidth : Math.Min(labelWidth, widthConstraint), Double.IsPositiveInfinity(heightConstraint) ? labelHeight : Math.Min(labelHeight, heightConstraint));
             }
 
-            return base.SizeThatFits(widthConstraint, heightConstaint);
+            return base.SizeThatFits(widthConstraint, heightConstraint);
         }
 
         protected override void InternalDraw(SKCanvas canvas)

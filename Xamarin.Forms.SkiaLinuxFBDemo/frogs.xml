@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ArrayOfFrog>
+	<Frog>
+		<Name>Rio Grande leopard frog</Name>
+		<Image>riogrande.jpg</Image>
+		<Description>The Rio Grande leopard frogs grow from 2.2 to 4.5 inches in length. They are usually tan, brown, or pale green in color, with distinctive black spotting with prominent light-colored ridges down either side of their backs. Their noses are angular, and they have long, powerful legs with webbed feet.</Description>
+	</Frog>
+	<Frog>
+		<Name>American bullfrog</Name>
+		<Image>americanbullfrog.jpg</Image>
+		<Description>The American bullfrog (Lithobates catesbeianus), often simply known as the bullfrog in Canada and the United States, is an amphibious frog, a member of the family Ranidae, or “true frogs”. This frog has an olive green back and sides blotched with brownish markings and a whitish belly spotted with yellow or grey.</Description>
+	</Frog>
+	<Frog>
+		<Name>Southern cricket frog</Name>
+		<Image>southerncricketfrog.jpg</Image>
+		<Description>The southern cricket frog or southeastern cricket frog (Acris gryllus) is a small hylid frog native to the Southeastern United States. It is very similar in appearance and habits to the northern cricket frog, Acris crepitans, and was considered formerly conspecific (Dickerson 1906). The scientific name Acris is from the Greek word for locust, and the species name gryllus is Latin for cricket (Georgia Wildlife).</Description>
+	</Frog>
+	<Frog>
+		<Name>Canyon tree frog</Name>
+		<Image>canyontreefrog.jpg</Image>
+		<Description>The canyon tree frog (Hyla arenicolor) is a species of tree frog native to the rocky plateau areas of southern United States, primarily in New Mexico and Arizona, but it also ranges to Utah, Texas, and Colorado, and as far south as the Mexican states of Michoacán, México, Guanajuato, Guerrero, and Oaxaca.</Description>
+	</Frog>
+	<Frog>
+		<Name>Rio Grande leopard frog</Name>
+		<Image>riogrande.jpg</Image>
+		<Description>The Rio Grande leopard frogs grow from 2.2 to 4.5 inches in length. They are usually tan, brown, or pale green in color, with distinctive black spotting with prominent light-colored ridges down either side of their backs. Their noses are angular, and they have long, powerful legs with webbed feet.</Description>
+	</Frog>
+	<Frog>
+		<Name>Northern red-legged frog</Name>
+		<Image>northernredleggedfrog.jpg</Image>
+		<Description>The northern red-legged frog (Rana aurora) is a species of amphibian, whose range is the coastal region stretching from southwest British Columbia to southern Mendocino County in Northern California, and is protected in British Columbia, Oregon and California. As a member of the genus Rana, this species is considered a true frog, with characteristic smooth skin and a narrow waist. This frog requires still waters for breeding, and is rarely found at any great distance from its breeding ponds or marshes.</Description>
+	</Frog>
+	<Frog>
+		<Name>American bullfrog</Name>
+		<Image>americanbullfrog.jpg</Image>
+		<Description>The American bullfrog (Lithobates catesbeianus), often simply known as the bullfrog in Canada and the United States, is an amphibious frog, a member of the family Ranidae, or “true frogs”. This frog has an olive green back and sides blotched with brownish markings and a whitish belly spotted with yellow or grey.</Description>
+	</Frog>
+	<Frog>
+		<Name>Southern cricket frog</Name>
+		<Image>southerncricketfrog.jpg</Image>
+		<Description>The southern cricket frog or southeastern cricket frog (Acris gryllus) is a small hylid frog native to the Southeastern United States. It is very similar in appearance and habits to the northern cricket frog, Acris crepitans, and was considered formerly conspecific (Dickerson 1906). The scientific name Acris is from the Greek word for locust, and the species name gryllus is Latin for cricket (Georgia Wildlife).</Description>
+	</Frog>
+	<Frog>
+		<Name>Canyon tree frog</Name>
+		<Image>canyontreefrog.jpg</Image>
+		<Description>The canyon tree frog (Hyla arenicolor) is a species of tree frog native to the rocky plateau areas of southern United States, primarily in New Mexico and Arizona, but it also ranges to Utah, Texas, and Colorado, and as far south as the Mexican states of Michoacán, México, Guanajuato, Guerrero, and Oaxaca.</Description>
+	</Frog>
+	<Frog>
+		<Name>Northern red-legged frog</Name>
+		<Image>northernredleggedfrog.jpg</Image>
+		<Description>The northern red-legged frog (Rana aurora) is a species of amphibian, whose range is the coastal region stretching from southwest British Columbia to southern Mendocino County in Northern California, and is protected in British Columbia, Oregon and California. As a member of the genus Rana, this species is considered a true frog, with characteristic smooth skin and a narrow waist. This frog requires still waters for breeding, and is rarely found at any great distance from its breeding ponds or marshes.</Description>
+	</Frog>
+	<Frog>
+		<Name>Rio Grande leopard frog</Name>
+		<Image>riogrande.jpg</Image>
+		<Description>The Rio Grande leopard frogs grow from 2.2 to 4.5 inches in length. They are usually tan, brown, or pale green in color, with distinctive black spotting with prominent light-colored ridges down either side of their backs. Their noses are angular, and they have long, powerful legs with webbed feet.</Description>
+	</Frog>
+	<Frog>
+		<Name>American bullfrog</Name>
+		<Image>americanbullfrog.jpg</Image>
+		<Description>The American bullfrog (Lithobates catesbeianus), often simply known as the bullfrog in Canada and the United States, is an amphibious frog, a member of the family Ranidae, or “true frogs”. This frog has an olive green back and sides blotched with brownish markings and a whitish belly spotted with yellow or grey.</Description>
+	</Frog>
+	<Frog>
+		<Name>Southern cricket frog</Name>
+		<Image>southerncricketfrog.jpg</Image>
+		<Description>The southern cricket frog or southeastern cricket frog (Acris gryllus) is a small hylid frog native to the Southeastern United States. It is very similar in appearance and habits to the northern cricket frog, Acris crepitans, and was considered formerly conspecific (Dickerson 1906). The scientific name Acris is from the Greek word for locust, and the species name gryllus is Latin for cricket (Georgia Wildlife).</Description>
+	</Frog>
+	<Frog>
+		<Name>Canyon tree frog</Name>
+		<Image>canyontreefrog.jpg</Image>
+		<Description>The canyon tree frog (Hyla arenicolor) is a species of tree frog native to the rocky plateau areas of southern United States, primarily in New Mexico and Arizona, but it also ranges to Utah, Texas, and Colorado, and as far south as the Mexican states of Michoacán, México, Guanajuato, Guerrero, and Oaxaca.</Description>
+	</Frog>
+	<Frog>
+		<Name>Northern red-legged frog</Name>
+		<Image>northernredleggedfrog.jpg</Image>
+		<Description>The northern red-legged frog (Rana aurora) is a species of amphibian, whose range is the coastal region stretching from southwest British Columbia to southern Mendocino County in Northern California, and is protected in British Columbia, Oregon and California. As a member of the genus Rana, this species is considered a true frog, with characteristic smooth skin and a narrow waist. This frog requires still waters for breeding, and is rarely found at any great distance from its breeding ponds or marshes.</Description>
+	</Frog>
+		<Frog>
+		<Name>Rio Grande leopard frog</Name>
+		<Image>riogrande.jpg</Image>
+		<Description>The Rio Grande leopard frogs grow from 2.2 to 4.5 inches in length. They are usually tan, brown, or pale green in color, with distinctive black spotting with prominent light-colored ridges down either side of their backs. Their noses are angular, and they have long, powerful legs with webbed feet.</Description>
+	</Frog>
+	<Frog>
+		<Name>American bullfrog</Name>
+		<Image>americanbullfrog.jpg</Image>
+		<Description>The American bullfrog (Lithobates catesbeianus), often simply known as the bullfrog in Canada and the United States, is an amphibious frog, a member of the family Ranidae, or “true frogs”. This frog has an olive green back and sides blotched with brownish markings and a whitish belly spotted with yellow or grey.</Description>
+	</Frog>
+	<Frog>
+		<Name>Southern cricket frog</Name>
+		<Image>southerncricketfrog.jpg</Image>
+		<Description>The southern cricket frog or southeastern cricket frog (Acris gryllus) is a small hylid frog native to the Southeastern United States. It is very similar in appearance and habits to the northern cricket frog, Acris crepitans, and was considered formerly conspecific (Dickerson 1906). The scientific name Acris is from the Greek word for locust, and the species name gryllus is Latin for cricket (Georgia Wildlife).</Description>
+	</Frog>
+	<Frog>
+		<Name>Canyon tree frog</Name>
+		<Image>canyontreefrog.jpg</Image>
+		<Description>The canyon tree frog (Hyla arenicolor) is a species of tree frog native to the rocky plateau areas of southern United States, primarily in New Mexico and Arizona, but it also ranges to Utah, Texas, and Colorado, and as far south as the Mexican states of Michoacán, México, Guanajuato, Guerrero, and Oaxaca.</Description>
+	</Frog>
+	<Frog>
+		<Name>Northern red-legged frog</Name>
+		<Image>northernredleggedfrog.jpg</Image>
+		<Description>The northern red-legged frog (Rana aurora) is a species of amphibian, whose range is the coastal region stretching from southwest British Columbia to southern Mendocino County in Northern California, and is protected in British Columbia, Oregon and California. As a member of the genus Rana, this species is considered a true frog, with characteristic smooth skin and a narrow waist. This frog requires still waters for breeding, and is rarely found at any great distance from its breeding ponds or marshes.</Description>
+	</Frog>
+	<Frog>
+		<Name>Rio Grande leopard frog</Name>
+		<Image>riogrande.jpg</Image>
+		<Description>The Rio Grande leopard frogs grow from 2.2 to 4.5 inches in length. They are usually tan, brown, or pale green in color, with distinctive black spotting with prominent light-colored ridges down either side of their backs. Their noses are angular, and they have long, powerful legs with webbed feet.</Description>
+	</Frog>
+	<Frog>
+		<Name>American bullfrog</Name>
+		<Image>americanbullfrog.jpg</Image>
+		<Description>The American bullfrog (Lithobates catesbeianus), often simply known as the bullfrog in Canada and the United States, is an amphibious frog, a member of the family Ranidae, or “true frogs”. This frog has an olive green back and sides blotched with brownish markings and a whitish belly spotted with yellow or grey.</Description>
+	</Frog>
+	<Frog>
+		<Name>Southern cricket frog</Name>
+		<Image>southerncricketfrog.jpg</Image>
+		<Description>The southern cricket frog or southeastern cricket frog (Acris gryllus) is a small hylid frog native to the Southeastern United States. It is very similar in appearance and habits to the northern cricket frog, Acris crepitans, and was considered formerly conspecific (Dickerson 1906). The scientific name Acris is from the Greek word for locust, and the species name gryllus is Latin for cricket (Georgia Wildlife).</Description>
+	</Frog>
+	<Frog>
+		<Name>Canyon tree frog</Name>
+		<Image>canyontreefrog.jpg</Image>
+		<Description>The canyon tree frog (Hyla arenicolor) is a species of tree frog native to the rocky plateau areas of southern United States, primarily in New Mexico and Arizona, but it also ranges to Utah, Texas, and Colorado, and as far south as the Mexican states of Michoacán, México, Guanajuato, Guerrero, and Oaxaca.</Description>
+	</Frog>
+	<Frog>
+		<Name>Northern red-legged frog</Name>
+		<Image>northernredleggedfrog.jpg</Image>
+		<Description>The northern red-legged frog (Rana aurora) is a species of amphibian, whose range is the coastal region stretching from southwest British Columbia to southern Mendocino County in Northern California, and is protected in British Columbia, Oregon and California. As a member of the genus Rana, this species is considered a true frog, with characteristic smooth skin and a narrow waist. This frog requires still waters for breeding, and is rarely found at any great distance from its breeding ponds or marshes.</Description>
+	</Frog>
+</ArrayOfFrog>

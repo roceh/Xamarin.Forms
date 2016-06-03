@@ -80,7 +80,7 @@ namespace Xamarin.Forms.Platform.Skia
             GC.SuppressFinalize(this);
         }
 
-        public void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if ((_flags & VisualElementRendererFlags.Disposed) != 0)
                 return;

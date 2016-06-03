@@ -29,5 +29,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)VisualElementPackager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)VisualElementRenderer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)VisualElementTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderers\ButtonRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\TouchAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\TouchPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaListCellRequestEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaListSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderers\ListViewRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderers\ListViewRendererSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaListSelectedItemEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\SkiaImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderers\ImageRenderer.cs" />
   </ItemGroup>
 </Project>
